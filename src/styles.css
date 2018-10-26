@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html {
+    font-family: 'Open Sans', sans-serif;
+    min-height: 180px;
+    padding: 0;
+    width: 420px;
+    margin: 0;
+    
+}
+
+body {
+    margin: 15px 10px 15px 10px;
+   
+    color: #252525;
+    /* font-family: 'Roboto',arial,sans-serif; */
+    font-size: 14px;
+}
+
+.pos {
+    color: #747474;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.sentences {
+    font-size: 18px;
+}
+
+.translate-input {
+    width: 300px !important;
+}
+
+.translate-button {
+    margin-left: 9px !important;
+}
+.result td {
+    padding: 5px 10px 0 0;
+    vertical-align: top;
+}
+
+display-none {
+    display: none;
+}

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Translator",
+  "description": "This extension will a translate text",
+  "version": "1.0.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "contextMenus"
+  ],
+  "background": {
+    "page": "index.html#/event-page",
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "options_page": "index.html#/options",
+  "browser_action": {
+    "default_title": "Open Popup!",
+    "default_popup": "index.html#/popup"
+  },
+  "icons": {
+    "19": "assets/icon_19.png",
+    "38": "assets/icon_38.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,33 @@
+<ng-container *ngIf="!hasResult">
+  <form [formGroup]="form" (ngSubmit)="translate()">
+    <div>
+      <mat-form-field class="translate-input">
+        <input matInput placeholder="Text" formControlName="text">
+      </mat-form-field>
+
+      <button class="translate-button" mat-raised-button color="primary" [disabled]="!form.valid">Translate</button>
+    </div>
+  </form>
+</ng-container>
+
+<ng-container *ngIf="hasResult">
+  <button style="float: right;" (click)="hasResult = false;" mat-raised-button color="primary">Edit</button>
+  <ng-container *ngIf="result.sentences">
+    <p class="sentences" *ngFor="let sent of result.sentences">
+      {{sent.trans}}
+    </p>
+  </ng-container>
+
+  <ng-container *ngIf="result.dict">
+    <table class="result">
+      <tr *ngFor="let d of result.dict">
+        <td class="pos">{{d.pos}}</td>
+        <td>
+          <span *ngFor="let term of d.terms; let last = last;">
+            {{term}}{{last ? '': ','}}
+          </span>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+</ng-container>
