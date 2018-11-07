@@ -2,7 +2,7 @@
   <form [formGroup]="form" (ngSubmit)="translate()">
     <div>
       <mat-form-field class="translate-input">
-        <input matInput placeholder="Text" formControlName="text">
+        <input matInput placeholder="Text" formControlName="text" autocomplete="off">
       </mat-form-field>
 
       <button class="translate-button" mat-raised-button color="primary" [disabled]="!form.valid">Translate</button>
